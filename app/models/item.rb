@@ -1,4 +1,4 @@
 class Item < ApplicationRecord
-  validates :warehouse_id, optional: true 
-  belongs_to :warehouse 
+  validates :warehouse_id, presence: true
+  belongs_to :warehouse
 end
