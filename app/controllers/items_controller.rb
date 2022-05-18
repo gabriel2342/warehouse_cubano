@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[ show edit update destroy ]
-
+  before_action :set_warehouses 
   # GET /items or /items.json
   def index
     @items = Item.all
@@ -66,5 +66,9 @@ class ItemsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def item_params
       params.require(:item).permit(:artist, :name, :quantity)
+    end
+
+    def set_warehouses
+      @warehouses = Warehouse.all.order(:name)
     end
 end
