@@ -4,4 +4,10 @@
     <%= warehouse.name %>
   </p>
 
+  <% warehouse.items.each do |item| %>
+    <p>
+      <%= item.name %> | <%= link_to "View Item", item %> 
+    </p>
+  <% end %>
+
 </div>

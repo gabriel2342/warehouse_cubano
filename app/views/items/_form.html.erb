@@ -25,7 +25,10 @@
     <%= form.label :quantity, style: "display: block" %>
     <%= form.number_field :quantity %>
   </div>
-
+  <div>
+    <%= form.label :warehouse, style: "display: block" %>
+    <%= form.select :warehouse_id, options_for_select(@warehouses.collect { |warehouse| [warehouse.name, warehouse.id]})%>
+  </div>
   <div>
     <%= form.submit %>
   </div>
