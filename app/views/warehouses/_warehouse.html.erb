@@ -1,13 +1,16 @@
 <div id="<%= dom_id warehouse %>">
-  <p>
-    <strong>Name:</strong>
-    <%= warehouse.name %>
-  </p>
-
-  <% warehouse.items.each do |item| %>
+  <div class="row">
+    <div class="col">
     <p>
-      <%= item.name %> | <%= link_to "View Item", item %> 
+      <strong>Name:</strong>
+      <%= warehouse.name %>
     </p>
-  <% end %>
+    </div>
 
+    <% warehouse.items.each do |item| %>
+      <p>
+        <%= item.name %> | <%= link_to "View Item", item %> 
+      </p>
+    <% end %>
+  </div>
 </div>

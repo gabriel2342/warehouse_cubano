@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Items for sale</h1>
-
+<figure class="text-center">
+<h1>Apoya a Las Artistas Cuban@s: Items Available</h1>
+</figure><br>
 <table class="table">
   <thead>
     <tr>
@@ -21,7 +21,7 @@
         <td><%= item.artist %></td>
         <td><%= item.quantity%></td>
         <td><%= item.warehouse.name%></td>
-        <td><%= link_to "Show", item %> | <%= link_to "Delete", item, method: :delete, data: { confirm: 'Are you sure?'} %></td>
+        <td><%= link_to "View item details", item %>
       </tr>
     <% end %>
   </tbody>

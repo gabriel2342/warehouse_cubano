@@ -1,5 +1,5 @@
 <p style="color: green"><%= notice %></p>
-
+<div class="container">
 <h1>Warehouses</h1>
 
 <div id="warehouses">
@@ -7,9 +7,10 @@
     <%= render warehouse %>
     <p>
       <%= link_to "Show this warehouse", warehouse %>
-    </p>
+    </p><br>
   <% end %>
 </div>
 
 <%= link_to "Add Warehouse", new_warehouse_path %>
 <%= link_to "Back to Items%", root_path>
+</div>
